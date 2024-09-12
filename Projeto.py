@@ -42,8 +42,8 @@ def get_info_site():
         element_2 = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'WEBDOOR_headercorporativogo_txtDocumento')))
 
         # Interação com a página
-        ask_uni = "17392159"
-        ask_cod = "58910620110"
+        ask_uni = "" #inserir a unidade consumidora aqui
+        ask_cod = "" #inserir o cpf do titular aqui
 
         time.sleep(3)
         element.click()
@@ -84,7 +84,7 @@ def get_info_site():
 
         element_3 = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'WEBDOOR_headercorporativogo_txtData')))
 
-        ask_date = "25041973"
+        ask_date = "" #inserir a data de nascimento do titular aqui no formato DDMMAAAA
         element_3.click()
         time.sleep(1)
         element_3.send_keys(ask_date)
@@ -114,7 +114,7 @@ def get_info_site():
             ano_ref = driver.find_element(By.NAME, 'ctl00$CONTENT$ddReferencia')
             options = ano_ref.find_elements(By.TAG_NAME, 'option')
             values = [option.get_attribute('value') for option in options]
-            ano = "2024"
+            ano = "" #Inserir o ano desejado aqui
 
             if ano in values:
                 select = Select(ano_ref)
