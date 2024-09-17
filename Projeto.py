@@ -158,7 +158,7 @@ def get_info_site():
         for mes_ano in mes_ano_map:
             print(mes_ano)
 
-        mes_ano_selecionado = input("Digite o mês/ano desejado (ex: 01/2024): ")
+        mes_ano_selecionado = input("Digite o mês/ano desejado (ex: 1/2024): ")
 
         if mes_ano_selecionado in mes_ano_map:
             row = mes_ano_map[mes_ano_selecionado]
